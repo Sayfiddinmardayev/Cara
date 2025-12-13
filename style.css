@@ -13,14 +13,12 @@ html {
 /* Global Styles */
 
 h1 {
-  font-size: 50px;
-  line-height: 64px;
+  
   color: #222;
 }
 
 h2 {
-  font-size: 46px;
-  line-height: 54px;
+  
   color: #222;
 }
 
@@ -76,7 +74,13 @@ a{
   gap: 20px;
 }
 
-.navbar a{
+.navbar-list{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-list a{
   font-size: 16px;
   font-weight: 600;
   color: #1a1a1a;
@@ -84,14 +88,56 @@ a{
   border-bottom: 2px solid transparent;
 }
 
-.navbar a:hover,
-.navbar a.active{
+.navbar-list a:hover,
+.navbar-list a.active{
   color: #088178;
   border-bottom: 3px solid #088178;
 }
 
 .navbar i{
   font-size: 25px;
+}
+
+.navbar i:hover{
+  color: #088178;
+}
+
+.navbar .menu{
+  display: none;
+  cursor: pointer;
+}
+
+.navbar .menu:hover{
+  color: #088178;
+}
+
+@media (max-width: 650px) {
+  .topbar{
+    padding: 10px 5%;
+  }
+  /* .navbar-list{
+    display: none;
+  } */
+  .navbar .menu{
+    display: block;
+  }
+  .navbar-list{
+    position: fixed;
+    top: 0;
+    left: 0; 
+    background-color: white;
+    width: 70%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: start;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgb(111, 99, 99);
+    transform: translateX(-100%);
+    transition: .5s;
+  }
+  .navbar-list.active{
+    transform: translateX(0);
+  }
 }
 
 /* Header */
@@ -114,6 +160,12 @@ a{
 
 .header-text h1{
   color: #088178;
+  font-size: 50px;
+  margin-top: 10px;
+}
+
+.header-text h2{
+  font-size: 50px;
 }
 
 .header-text a{
@@ -126,3 +178,71 @@ a{
   display: inline-block;
   color: #088178;
 }
+
+@media (max-width: 650px) {
+  .header-text{
+    padding-left: 5%;
+  }
+  .header-text h1{
+    color: #088178;
+    font-size: 40px;
+    margin-top: 10px;
+  }
+  
+  .header-text h2{
+    font-size: 50px;
+  }
+}
+
+/* Feature */
+.feature{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 10%;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.feature-item{
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 0 10px #088178;
+  border-radius: 10px;
+  transition: .3s;
+  margin: 10px;
+}
+
+.feature-item:hover{
+  background-color: #088178;
+  box-shadow: 0 0 10px #00433e;
+  color: white;
+}
+
+.feature-item img{
+  width: 100%;
+  margin: auto;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.feature-item h3{
+  margin-top: 5px;
+  font-size: 14px;
+  background-color: lime;
+  padding: 5px 10px;
+  display: inline-block;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+@media (max-width:480px) {
+  .feature{
+    gap: 30px;
+    margin: 30px 5%;
+  }
+
+  .feature-item{
+    width: 100%;
+  }
+} 
