@@ -332,3 +332,38 @@ a{
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+/* Services */
+.services{
+  background-image: url("img/banner/b2.jpg");
+  padding: 50px 0;
+  text-align: center;
+  color: white;
+}
+
+.services h3{
+  font-size: 24px;
+  margin: 15px 0;
+}
+
+.services h3 span{
+  color: rgb(184, 1, 1);
+}
+
+.services a{
+  background-color: white;
+  color: black;
+  padding: 13px 20px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+@media (max-width: 480px){
+  .services h3{
+    font-size: 18px;
+  }
+
+  .services a{
+    padding: 10px 15px;
+  }
+}
