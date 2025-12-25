@@ -10,46 +10,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Global Styles */
-
-h1 {
-  
-  color: #222;
-}
-
-h2 {
-  
-  color: #222;
-}
-
-h4 {
-  font-size: 20px;
-  color: #222;
-}
-
-h6 {
-  font-weight: 700;
-  font-size: 12px;
-}
-
-p {
-  font-size: 16px;
-  color: #465b52;
-  margin: 15px 0 20px 0;
-}
-
-.section-p1 {
-  padding: 40px 80px;
-}
-
-.section-m1 {
-  margin: 40px 0;
-}
-
-body {
-  width: 100%;
-}
-
 a{
   text-decoration: none;
   color: inherit;
@@ -316,15 +276,16 @@ a{
 }
 
 @media (max-width: 900px) {
+  .product{
+    margin: 30px 5%;
+  }
   .product-content{
     grid-template-columns: repeat(2, 1fr);
+    margin: 30px 5%;
   }
 }
 
 @media (max-width: 480px) {
-  .product{
-    margin: 30px 5%;
-  }
   .product-title h2{
     font-size: 32px;
   }
@@ -365,5 +326,96 @@ a{
 
   .services a{
     padding: 10px 15px;
+  }
+}
+
+/* Smm banner */
+.sm-banner{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 50px 10% 20px;
+}
+
+.sm-banner .sm-banner-item{
+  padding: 100px 30px;
+  background-image: url(img/banner/b17.jpg);
+  color: white;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.sm-banner .sm-banner-item:nth-child(2){
+  background-image: url(img/banner/b10.jpg);
+}
+
+.sm-banner-item h2{
+  font-size: 36px;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
+.sm-banner-item a{
+  padding: 13px 20px;
+  border-radius: 10px;
+  border: 1px solid white;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.sm-banner-item a:hover{
+  background-color: white;
+  color: black;
+}
+
+@media (max-width:700px){
+  .sm-banner{
+    grid-template-columns: repeat(1, 1fr);
+    margin: 30px 5%;
+  }
+}
+
+/* Banner */
+.banner{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+  margin: 0px 10% 50px;
+}
+
+.banner-item{
+  padding: 100px 20px;
+  background-image: url(img/banner/b7.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  border-radius: 10px;
+}
+
+.banner-item:nth-child(2){
+  background-image: url(img/banner/b4.jpg);
+}
+
+.banner-item:nth-child(3){
+  background-image: url(img/banner/b18.jpg);
+}
+
+.banner-item h2{
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+@media (max-width:965px){
+  .banner{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width:700px){
+  .banner{
+  grid-template-columns: repeat(1, 1fr);
+  margin: 0px 5% 50px;
   }
 }
