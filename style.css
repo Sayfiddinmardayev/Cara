@@ -209,7 +209,7 @@ a{
 
 /* Product */
 .product-wrapper{
-  margin: 50px 0;
+  margin: 50px 0 30px;
 }
 
 .product{
@@ -598,4 +598,112 @@ a{
 .shop-header h1{
   font-size: 48px;
   margin-bottom: 15px;
+}
+
+/* Pagenation */
+.paganation{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 30px;
+  gap: 10px;
+}
+
+.paganation a{
+  background-color: #088178;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.paganation a i{
+  font-size: 24px;
+}
+
+@media (max-width:650px){
+  .paganation{
+    gap: 7px;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .paganation a{
+    font-size: 14px;
+    border-radius: 3px;
+  }
+}
+
+/* Details */
+.details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  gap: 30px;
+}
+
+.details-img{
+  width: 40%;
+}
+
+.details-img img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.details-img-bottom{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+.details-text{
+  width: 60%;
+}
+
+.details-text h3{
+  font-size: 22px;
+  font-weight: 600;
+  margin: 15px 0;
+}
+
+.details-text h4{
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.details-text select{
+  padding: 7px 10px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.details-add input{
+  padding: 7px 10px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  outline: none;
+  width: 80px;
+}
+
+.details-add button{
+  padding: 7px 10px;
+  background-color: #088178;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
 }
